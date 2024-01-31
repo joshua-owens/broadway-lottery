@@ -1,0 +1,14 @@
+version: '3'
+services:
+  discord:
+    build: 
+      context: . 
+      dockerfile: ./cmd/discord/Dockerfile
+    volumes:
+      - ./cmd/discord:/app
+  scraper:
+    build: 
+      context: .
+      dockerfile: ./cmd/scraper/Dockerfile
+    volumes:
+      - ./cmd/scraper:/app
